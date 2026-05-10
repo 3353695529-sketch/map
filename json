@@ -1,0 +1,252 @@
+{
+  "server": {
+    "name": "璀璨之光",
+    "subtitle": "PVP × PVE × Light RP",
+    "qqGroup": "686854228",
+    "discord": "https://discord.gg/eMmnXqVtxK",
+    "website": "https://vv.astlora.cn"
+  },
+
+  "map": {
+    "name": "PEI",
+    "image": "maps/pei.png",
+
+    "zones": [
+      {
+        "name": "交火区",
+        "type": "PVP",
+        "color": "red",
+        "x": 35,
+        "y": 28,
+        "radius": 120,
+        "description": "高危险PVP区域"
+      },
+
+      {
+        "name": "协议区",
+        "type": "PVE",
+        "color": "blue",
+        "x": 60,
+        "y": 45,
+        "radius": 100,
+        "description": "资源探索与发展区域"
+      },
+
+      {
+        "name": "安全区",
+        "type": "SAFE",
+        "color": "yellow",
+        "x": 50,
+        "y": 70,
+        "radius": 80,
+        "description": "严格和平区域"
+      },
+
+      {
+        "name": "死亡区",
+        "type": "DANGER",
+        "color": "black",
+        "x": 82,
+        "y": 22,
+        "radius": 140,
+        "description": "极高危险区域"
+      },
+
+      {
+        "name": "商人活动区",
+        "type": "TRADER",
+        "color": "green",
+        "x": 40,
+        "y": 55,
+        "radius": 90,
+        "description": "流浪商人与黑市活动区域"
+      },
+
+      {
+        "name": "维和区域",
+        "type": "PEACEKEEPER",
+        "color": "white",
+        "x": 72,
+        "y": 62,
+        "radius": 100,
+        "description": "维和部队活动区域"
+      }
+    ]
+  },
+
+  "factions": [
+    {
+      "id": "government",
+      "name": "临时政府",
+      "type": "正规军",
+
+      "description": "负责维持秩序与建立安全区域的官方势力。",
+
+      "relations": {
+        "革命军": "敌对",
+        "特警司令部": "盟友",
+        "维和部队": "合作",
+        "土匪": "敌对",
+        "流浪商人": "友好"
+      }
+    },
+
+    {
+      "id": "revolution",
+      "name": "新革命军",
+      "type": "游击势力",
+
+      "description": "反抗旧秩序的武装组织。",
+
+      "relations": {
+        "临时政府": "敌对",
+        "特警司令部": "高度敌对",
+        "维和部队": "复杂关系",
+        "土匪": "不稳定合作",
+        "流浪商人": "中立"
+      }
+    },
+
+    {
+      "id": "swat",
+      "name": "特警司令部",
+      "type": "军事组织",
+
+      "description": "高度武装化的特种军事力量。",
+
+      "relations": {
+        "临时政府": "盟友",
+        "革命军": "敌对",
+        "维和部队": "有限合作",
+        "土匪": "敌对",
+        "流浪商人": "中立保护"
+      }
+    },
+
+    {
+      "id": "peacekeeper",
+      "name": "维和部队",
+      "type": "中立组织",
+
+      "description": "负责稳定局势与护送商队。",
+
+      "relations": {
+        "临时政府": "合作",
+        "革命军": "中立偏警惕",
+        "特警司令部": "有限合作",
+        "土匪": "敌对",
+        "流浪商人": "保护关系"
+      }
+    },
+
+    {
+      "id": "bandit",
+      "name": "土匪",
+      "type": "废土势力",
+
+      "description": "高风险高收益的掠夺者组织。",
+
+      "relations": {
+        "临时政府": "敌对",
+        "革命军": "利益合作",
+        "特警司令部": "敌对",
+        "维和部队": "敌对",
+        "流浪商人": "掠夺目标"
+      }
+    },
+
+    {
+      "id": "trader",
+      "name": "流浪商人",
+      "type": "NPC",
+
+      "description": "全地图通常仅存在一名流浪商人。",
+
+      "vehicle": "装甲车",
+
+      "behavior": {
+        "hostile": false,
+        "randomItems": true,
+        "hideInVehicle": true
+      },
+
+      "relations": {
+        "所有正规阵营": "中立",
+        "维和部队": "友好",
+        "土匪": "危险关系"
+      }
+    }
+  ],
+
+  "rules": {
+    "baseRaid": false,
+
+    "important": [
+      "禁止外挂",
+      "禁止BUG利用",
+      "禁止恶意骚扰",
+      "禁止恶意钻规则漏洞",
+      "禁止假和平骗杀",
+      "禁止假扮维和抢劫",
+      "禁止小号转移违规收益"
+    ],
+
+    "building": [
+      "允许建造基地",
+      "允许建立据点",
+      "允许建立贸易站",
+      "禁止炸家",
+      "禁止偷拆",
+      "禁止恶意破坏建筑",
+      "即使敌对阵营也不允许拆家"
+    ],
+
+    "chat": [
+      "禁止辱骂",
+      "禁止歧视",
+      "禁止刷屏",
+      "禁止外挂宣传",
+      "允许正常交流",
+      "允许阵营招募",
+      "允许RP互动"
+    ]
+  },
+
+  "punishments": {
+    "minor": [
+      "警告",
+      "踢出服务器"
+    ],
+
+    "medium": [
+      "临时封禁"
+    ],
+
+    "serious": [
+      "永久封禁"
+    ]
+  },
+
+  "trader": {
+    "enabled": true,
+
+    "maxCount": 1,
+
+    "randomInventory": true,
+
+    "vehicle": "装甲车",
+
+    "spawnZones": [
+      "绿圈"
+    ],
+
+    "possibleLoot": [
+      "稀有枪械",
+      "高级医疗",
+      "战术装备",
+      "高级弹药",
+      "收藏品",
+      "特殊零件"
+    ]
+  }
+}
