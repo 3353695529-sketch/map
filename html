@@ -1,378 +1,426 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>璀璨之光 - 玩家手册</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    body {
-      background: #0f1115;
-      color: #f5f5f5;
-      font-family: "Microsoft YaHei", sans-serif;
-      line-height: 1.8;
-    }
+<title>璀璨之光 - 玩家手册</title>
 
-    header {
-      background: linear-gradient(135deg, #111827, #1f2937);
-      padding: 60px 20px;
-      text-align: center;
-      border-bottom: 3px solid #3b82f6;
-    }
+<link rel="icon" type="image/png" href="favicon.png">
 
-    header h1 {
-      font-size: 48px;
-      margin-bottom: 15px;
-      color: #60a5fa;
-    }
+<style>
 
-    header p {
-      font-size: 18px;
-      color: #cbd5e1;
-    }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    nav {
-      position: sticky;
-      top: 0;
-      background: #111827;
-      padding: 15px;
-      border-bottom: 1px solid #374151;
-      z-index: 999;
-    }
+body{
+    background:#0f1115;
+    color:white;
+    font-family:"Microsoft YaHei";
+}
 
-    nav ul {
-      display: flex;
-      gap: 15px;
-      overflow-x: auto;
-      list-style: none;
-    }
+header{
+    background:linear-gradient(135deg,#111827,#1f2937);
+    padding:60px 20px;
+    text-align:center;
+    border-bottom:3px solid #2563eb;
+}
 
-    nav a {
-      color: #93c5fd;
-      text-decoration: none;
-      white-space: nowrap;
-      padding: 8px 14px;
-      border-radius: 8px;
-      transition: 0.2s;
-    }
+header h1{
+    font-size:52px;
+    color:#60a5fa;
+    margin-bottom:15px;
+}
 
-    nav a:hover {
-      background: #2563eb;
-      color: white;
-    }
+header p{
+    color:#cbd5e1;
+    font-size:18px;
+}
 
-    .container {
-      width: 95%;
-      max-width: 1200px;
-      margin: auto;
-      padding: 40px 0;
-    }
+.top-buttons{
+    margin-top:25px;
+}
 
-    section {
-      background: #161b22;
-      margin-bottom: 30px;
-      padding: 30px;
-      border-radius: 16px;
-      border: 1px solid #2d3748;
-      box-shadow: 0 0 15px rgba(0,0,0,0.25);
-    }
+.top-buttons a{
+    display:inline-block;
+    margin:8px;
+    padding:12px 22px;
+    background:#2563eb;
+    border-radius:10px;
+    text-decoration:none;
+    color:white;
+    transition:0.2s;
+}
 
-    section h2 {
-      color: #60a5fa;
-      margin-bottom: 20px;
-      font-size: 32px;
-    }
+.top-buttons a:hover{
+    background:#3b82f6;
+}
 
-    section h3 {
-      color: #93c5fd;
-      margin-top: 20px;
-      margin-bottom: 10px;
-    }
+nav{
+    position:sticky;
+    top:0;
+    background:#111827;
+    padding:15px;
+    border-bottom:1px solid #374151;
+    z-index:999;
+}
 
-    ul {
-      margin-left: 25px;
-      margin-top: 10px;
-    }
+nav ul{
+    display:flex;
+    gap:15px;
+    overflow-x:auto;
+    list-style:none;
+}
 
-    li {
-      margin-bottom: 8px;
-    }
+nav a{
+    color:#93c5fd;
+    text-decoration:none;
+    white-space:nowrap;
+    padding:8px 15px;
+    border-radius:8px;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
+nav a:hover{
+    background:#2563eb;
+    color:white;
+}
 
-    .card {
-      background: #1f2937;
-      padding: 20px;
-      border-radius: 12px;
-      border: 1px solid #374151;
-    }
+.container{
+    width:95%;
+    max-width:1300px;
+    margin:auto;
+    padding:40px 0;
+}
 
-    .card h3 {
-      margin-top: 0;
-      color: #60a5fa;
-    }
+section{
+    background:#161b22;
+    margin-bottom:35px;
+    padding:30px;
+    border-radius:18px;
+    border:1px solid #2d3748;
+}
 
-    .tag {
-      display: inline-block;
-      padding: 5px 10px;
-      border-radius: 6px;
-      font-size: 12px;
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
+section h2{
+    color:#60a5fa;
+    margin-bottom:25px;
+    font-size:34px;
+}
 
-    .red { background: #7f1d1d; }
-    .blue { background: #1e3a8a; }
-    .yellow { background: #92400e; }
-    .green { background: #166534; }
-    .white { background: #4b5563; }
-    .black { background: #111827; }
+section h3{
+    color:#93c5fd;
+    margin-top:20px;
+    margin-bottom:10px;
+}
 
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      color: #94a3b8;
-      border-top: 1px solid #374151;
-      margin-top: 40px;
-    }
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
+}
 
-    .btns {
-      margin-top: 20px;
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+.card{
+    background:#1f2937;
+    padding:20px;
+    border-radius:14px;
+    border:1px solid #374151;
+}
 
-    .btn {
-      background: #2563eb;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 10px;
-      text-decoration: none;
-      transition: 0.2s;
-    }
+.card h3{
+    margin-top:0;
+}
 
-    .btn:hover {
-      background: #3b82f6;
-    }
-  </style>
+.tag{
+    display:inline-block;
+    padding:5px 10px;
+    border-radius:8px;
+    font-size:12px;
+    margin-bottom:10px;
+    font-weight:bold;
+}
+
+.red{background:#7f1d1d;}
+.blue{background:#1e3a8a;}
+.green{background:#166534;}
+.yellow{background:#92400e;}
+.white{background:#6b7280;}
+.black{background:#000000;}
+
+.map-container{
+    position:relative;
+    margin-top:20px;
+}
+
+.map-image{
+    width:100%;
+    border-radius:16px;
+    border:2px solid #374151;
+}
+
+.zone{
+    position:absolute;
+    border-radius:50%;
+    transform:translate(-50%,-50%);
+    opacity:0.55;
+    border:2px solid white;
+}
+
+.zone:hover{
+    opacity:0.9;
+}
+
+footer{
+    text-align:center;
+    padding:40px 20px;
+    border-top:1px solid #374151;
+    color:#94a3b8;
+}
+
+</style>
 </head>
+
 <body>
 
 <header>
-  <h1>璀璨之光</h1>
-  <p>Unturned 中文末日生存服务器 · PVP × PVE × Light RP</p>
 
-  <div class="btns">
-    <a class="btn" href="https://vv.astlora.cn" target="_blank">官方网站</a>
-    <a class="btn" href="https://discord.gg/eMmnXqVtxK" target="_blank">Discord</a>
-  </div>
+<h1 id="server-name">加载中...</h1>
+
+<p id="server-subtitle"></p>
+
+<div class="top-buttons">
+
+<a id="website-btn" target="_blank">官方网站</a>
+
+<a id="discord-btn" target="_blank">Discord</a>
+
+</div>
+
 </header>
 
 <nav>
-  <ul>
-    <li><a href="#intro">服务器简介</a></li>
-    <li><a href="#zones">区域规则</a></li>
-    <li><a href="#factions">阵营介绍</a></li>
-    <li><a href="#relations">阵营关系</a></li>
-    <li><a href="#rules">服务器规则</a></li>
-    <li><a href="#punish">处罚机制</a></li>
-  </ul>
+
+<ul>
+<li><a href="#intro">服务器简介</a></li>
+<li><a href="#map">游戏地图</a></li>
+<li><a href="#zones">区域规则</a></li>
+<li><a href="#factions">阵营介绍</a></li>
+<li><a href="#rules">服务器规则</a></li>
+</ul>
+
 </nav>
 
 <div class="container">
 
 <section id="intro">
-  <h2>服务器简介</h2>
-  <p>
-    欢迎来到《璀璨之光》。这是一个融合 PVP、PVE 与轻度角色扮演（Light RP）的中文末日生存服务器。
-    这里不仅仅是普通PVP服务器，更是一个由玩家共同创造故事、战争与秩序的世界。
-  </p>
+
+<h2>服务器简介</h2>
+
+<p>
+欢迎来到《璀璨之光》。
+这是一个融合 PVP、PVE 与轻度角色扮演（Light RP）的中文末日生存服务器。
+整个世界由玩家共同创造与推动。
+</p>
+
+</section>
+
+<section id="map">
+
+<h2 id="map-title">游戏地图</h2>
+
+<div class="map-container">
+
+<img id="map-image" class="map-image">
+
+<div id="zones-container"></div>
+
+</div>
+
 </section>
 
 <section id="zones">
-  <h2>区域规则</h2>
 
-  <div class="grid">
+<h2>区域规则</h2>
 
-    <div class="card">
-      <div class="tag red">交火区（红圈）</div>
-      <h3>高危险PVP区域</h3>
-      <ul>
-        <li>允许阵营战争</li>
-        <li>允许资源争夺</li>
-        <li>允许伏击与载具战</li>
-        <li>禁止外挂与BUG利用</li>
-      </ul>
-    </div>
+<div class="grid" id="zones-grid"></div>
 
-    <div class="card">
-      <div class="tag blue">协议区（蓝圈）</div>
-      <h3>资源探索区域</h3>
-      <ul>
-        <li>默认禁止恶意主动攻击</li>
-        <li>允许自卫反击</li>
-        <li>允许玩家贸易</li>
-        <li>禁止RDM与假和平骗杀</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <div class="tag yellow">安全区（黄圈）</div>
-      <h3>严格和平区域</h3>
-      <ul>
-        <li>用于交易与社交</li>
-        <li>禁止主动攻击</li>
-        <li>禁止偷车与堵路</li>
-        <li>违规处罚加重</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <div class="tag black">死亡区（黑圈）</div>
-      <h3>极高危险区域</h3>
-      <ul>
-        <li>高级感染者</li>
-        <li>高级物资</li>
-        <li>高强度PVP</li>
-        <li>进入默认接受高风险</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <div class="tag green">商人活动区（绿圈）</div>
-      <h3>流浪商人区域</h3>
-      <ul>
-        <li>全地图通常仅一名商人</li>
-        <li>出售物品随机</li>
-        <li>不会主动攻击</li>
-        <li>危险时会躲进装甲车</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <div class="tag white">维和区域（白圈）</div>
-      <h3>维和部队活动区</h3>
-      <ul>
-        <li>用于巡逻与护送</li>
-        <li>维和部队不是管理员</li>
-        <li>允许调停冲突</li>
-        <li>禁止滥用身份</li>
-      </ul>
-    </div>
-
-  </div>
 </section>
 
 <section id="factions">
-  <h2>阵营介绍</h2>
 
-  <div class="grid">
+<h2>阵营介绍</h2>
 
-    <div class="card">
-      <h3>临时政府</h3>
-      <p>秩序维护阵营，负责区域管理、保护平民与建立检查站。</p>
-    </div>
-
-    <div class="card">
-      <h3>新革命军</h3>
-      <p>反抗旧秩序的武装势力，擅长游击战与高机动突袭。</p>
-    </div>
-
-    <div class="card">
-      <h3>特警司令部</h3>
-      <p>高度军事化阵营，拥有强大战斗力与重武装行动能力。</p>
-    </div>
-
-    <div class="card">
-      <h3>维和部队</h3>
-      <p>负责调停冲突、维持区域稳定与护送商队。</p>
-    </div>
-
-    <div class="card">
-      <h3>土匪</h3>
-      <p>高风险高收益阵营，允许抢劫与伏击，但禁止恶意折磨玩家。</p>
-    </div>
-
-    <div class="card">
-      <h3>流浪商人</h3>
-      <p>特殊中立NPC势力，全地图通常仅存在一名，出售物资随机。</p>
-    </div>
-
-  </div>
-</section>
-
-<section id="relations">
-  <h2>阵营关系</h2>
-
-  <ul>
-    <li>临时政府 ↔ 新革命军：敌对</li>
-    <li>临时政府 ↔ 特警司令部：盟友</li>
-    <li>维和部队 ↔ 流浪商人：保护关系</li>
-    <li>土匪 ↔ 流浪商人：掠夺目标</li>
-    <li>新革命军 ↔ 维和部队：复杂关系</li>
-    <li>特警司令部 ↔ 土匪：长期敌对</li>
-  </ul>
+<div class="grid" id="factions-grid"></div>
 
 </section>
 
 <section id="rules">
-  <h2>服务器总规则</h2>
 
-  <h3>重点规则</h3>
-  <ul>
-    <li>禁止外挂与BUG利用</li>
-    <li>禁止恶意钻规则漏洞</li>
-    <li>禁止恶意骚扰玩家</li>
-    <li>禁止假和平骗杀</li>
-    <li>禁止假扮维和抢劫</li>
-    <li>禁止利用小号转移违规收益</li>
-  </ul>
+<h2>服务器规则</h2>
 
-  <h3>基地规则</h3>
-  <ul>
-    <li>允许建造基地与据点</li>
-    <li>服务器禁止拆家</li>
-    <li>禁止炸家与恶意破坏建筑</li>
-    <li>即使敌对阵营也不允许拆家</li>
-  </ul>
-</section>
+<div class="grid">
 
-<section id="punish">
-  <h2>处罚机制</h2>
+<div class="card">
 
-  <ul>
-    <li>轻度违规：警告 / 踢出服务器</li>
-    <li>中度违规：临时封禁</li>
-    <li>严重违规：永久封禁</li>
-    <li>作弊行为默认永久封禁</li>
-  </ul>
+<h3>重点规则</h3>
 
-  <h3>最终解释权</h3>
-  <p>
-    管理员拥有规则解释权与漏洞判定权。
-    恶意钻空子不属于合理玩法。
-  </p>
+<ul id="important-rules"></ul>
+
+</div>
+
+<div class="card">
+
+<h3>基地规则</h3>
+
+<ul id="building-rules"></ul>
+
+</div>
+
+<div class="card">
+
+<h3>聊天规则</h3>
+
+<ul id="chat-rules"></ul>
+
+</div>
+
+</div>
+
 </section>
 
 </div>
 
 <footer>
-  <p>《璀璨之光》Unturned 服务器</p>
-  <p>QQ群：686854228</p>
-  <p>希望你能在这里找到属于自己的生存方式。</p>
+
+<p>QQ群：686854228</p>
+
+<p>希望你能找到属于自己的生存方式。</p>
+
 </footer>
+
+<script>
+
+fetch("config.json")
+.then(res => res.json())
+.then(data => {
+
+    // 服务器信息
+    document.getElementById("server-name").innerText =
+        data.server.name;
+
+    document.getElementById("server-subtitle").innerText =
+        data.server.subtitle;
+
+    document.getElementById("website-btn").href =
+        data.server.website;
+
+    document.getElementById("discord-btn").href =
+        data.server.discord;
+
+    // 地图
+    document.getElementById("map-title").innerText =
+        "当前地图：" + data.map.name;
+
+    document.getElementById("map-image").src =
+        data.map.image;
+
+    // 地图区域
+    const zonesContainer =
+        document.getElementById("zones-container");
+
+    const zonesGrid =
+        document.getElementById("zones-grid");
+
+    data.map.zones.forEach(zone => {
+
+        // 地图圆圈
+        const circle = document.createElement("div");
+
+        circle.className =
+            "zone " + zone.color;
+
+        circle.style.left = zone.x + "%";
+
+        circle.style.top = zone.y + "%";
+
+        circle.style.width = zone.radius + "px";
+
+        circle.style.height = zone.radius + "px";
+
+        circle.title =
+            zone.name + " - " + zone.description;
+
+        zonesContainer.appendChild(circle);
+
+        // 区域卡片
+        zonesGrid.innerHTML += `
+            <div class="card">
+                <div class="tag ${zone.color}">
+                    ${zone.name}
+                </div>
+
+                <h3>${zone.type}</h3>
+
+                <p>${zone.description}</p>
+            </div>
+        `;
+    });
+
+    // 阵营
+    const factionsGrid =
+        document.getElementById("factions-grid");
+
+    data.factions.forEach(faction => {
+
+        factionsGrid.innerHTML += `
+            <div class="card">
+
+                <h3>${faction.name}</h3>
+
+                <p>${faction.description}</p>
+
+                <br>
+
+                <b>类型：</b>
+                ${faction.type}
+
+            </div>
+        `;
+    });
+
+    // 规则
+    function addRules(id, rules){
+
+        const element =
+            document.getElementById(id);
+
+        rules.forEach(rule => {
+
+            element.innerHTML += `
+                <li>${rule}</li>
+            `;
+        });
+    }
+
+    addRules(
+        "important-rules",
+        data.rules.important
+    );
+
+    addRules(
+        "building-rules",
+        data.rules.building
+    );
+
+    addRules(
+        "chat-rules",
+        data.rules.chat
+    );
+
+});
+
+</script>
 
 </body>
 </html>
